@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionclass();
             if(connect != null){
-                String query = "Select * from Product_Setuo_Tag";
+                String query = "Select * from Product_Setuo_Tab";
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
 

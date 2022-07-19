@@ -19,7 +19,7 @@ public class ConnectionHelper {
         database ="xxxxxxx";
         username ="sa";
         pass ="test";
-        port ="8080";
+        port ="1433";
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -30,7 +30,7 @@ public class ConnectionHelper {
         try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
             ConnectionURL = "jdbc:jtds:sqlserver://" + ip + ":" + port + ";"
-                    + "databasename" + database + ";user=" + username + ";password:" + pass +";";
+                    + "databasename=" + database + ";user=" + username + ";password:" + pass +";";
             connection = DriverManager.getConnection(ConnectionURL);
         }
         catch (Exception ex) {
